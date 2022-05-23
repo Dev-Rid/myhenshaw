@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+</head>
+    <style>
+        #container{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background-color: teal;
+            border-radius: 20px;
+
+        }
+
+        #animate{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: coral;
+            border-radius: 20px;
+        }
+
+        button{
+            background-color: crimson;
+            height: 40px;
+            width: 100px;
+            border-radius: 9px;
+        }
+    </style>
+
+<body>
+
+    <p><button onclick="myMove()" >click me</button></p>
+
+    <div id="container">
+        <div id="animate" ></div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    function myMove(){
+        let id = null;
+        const elem = document.getElementById("animate")
+        let pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame(){
+            if(pos ==350){
+                clearInterval(id);
+    } else{
+        pos++;
+        elem.style.top = pos + "px";
+        elem.style.left = pos + "px";
+    }
+}
+}
+
+
+
+
+
+
+</script>

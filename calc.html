@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+</head>
+
+<style>
+
+    body{
+        /* background: #212534; */
+        background: rgba(255, 255, 255, 0.431);
+    }
+    main{
+    
+    margin-left:200px ;
+    border: 5px solid rgba(243, 243, 243, 0.856);
+    margin-top: 10px;
+    width: 400px; 
+    height: 500px;
+    border-radius: 40px;
+    background-color: black;
+    box-shadow: 0 18px 36px rgba(0,0,0,0.30), 0 14px 11px rgba(0,0,0,0.22);
+    }
+
+    #d2{
+       /* border: 10px solid rgba(13, 13, 216, 0.174);*/
+        margin-left: 50px;
+        
+        width: 400px;
+        border-radius: 10px;
+        margin: 50px;
+        
+    }
+
+
+
+    button{
+        font-size: 30px;
+        border: 2px solid rgba(255, 255, 255, 0);
+        background-color: whitesmoke;
+        border-radius:25px;
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+
+    input{
+        background-color:black;
+        /* box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.10), 10px 10px 10px rgba(0,0,0,0.10);
+        margin-top: 20px; */
+        margin-left: 50px;
+        /* background: #191c29; */
+       /*border: 10px solid rgb(12, 12, 144);*/
+        border-radius: 15px;
+        height: 60px;
+        width: 300px;
+        border: 2px solid rgba(255, 255, 255, 0);
+        color: whitesmoke;
+        font-size: 40px;
+    }
+
+    .btn2{
+        background-color: teal;
+    }
+
+    .btn2:hover{
+        background-color: black;
+    }
+
+    .btn1{
+        background-color: rgba(0, 128, 128, 0.466);
+    }
+
+    .btn1:hover{
+        background-color:black
+    }
+    .in{
+        width: 50px;
+        height: 20px;
+        border-radius: 9px;
+    }
+
+
+</style>
+<body>
+
+
+    <main >
+      
+           
+            <input type="text" id="demo"> 
+
+      
+
+        <div id="d2" class="button" >
+
+            <div>
+            <button value="del" onclick="del()" class="btn1" >del</button>
+            <button value="clr" onclick="clr()" class="btn1" class="btn1">clr</button>
+           
+            <button value="=" onclick="solve()" style="width: 125px; height: 50px; background-color: navy;" > =</button>
+            
+            
+               <input class="in" onclick="inp()" type="checkbox" > 
+            
+            </div>
+            <br>
+
+            <button value="1" onclick="btn('1')" class="btn2"  > 1</button>
+            <button value="2" onclick="btn('2')" class="btn2" > 2</button>
+            <button value="3" onclick="btn('3')" class="btn2" >3</button>
+            <button value="+" onclick="btn('+')"  class="btn1" > +</button> 
+           
+
+            <br>
+            <button value="4" onclick="btn('4')" class="btn2" >4</button>
+            <button value="5" onclick="btn('5')" class="btn2" > 5</button>
+            <button value="6" onclick="btn('6')" class="btn2" > 6</button>
+            <button value="_" onclick="btn('-')"  class="btn1" >-</button> 
+           
+           
+            
+            <br>
+            <button value="7" onclick="btn('7')" class="btn2" > 7</button>
+            <button value="8" onclick="btn('8')" class="btn2" > 8</button>
+            <button value="9" onclick="btn('9')" class="btn2" > 9</button>
+            <button value="." onclick="btn('*')"  class="btn1" > * </button>
+
+
+            <br>
+            <button value="." onclick="btn('.')"  class="btn1" > . </button>
+            <button value="0" onclick="btn('0')" class="btn2" > 0</button>
+
+            <button value="/" onclick="btn('/')"  class="btn1" > /</button>
+            <button value="%" onclick="btn('%')"  class="btn1" > %</button> 
+           
+           
+           
+            
+        </div>
+
+    </main>
+  
+</body>
+</html>
+
+
+
+<script>
+
+    
+    function btn(val) {
+        document.getElementById('demo').value += val
+    }
+
+
+    function solve(){
+    let x = document.getElementById("demo").value
+    let y = eval(x)
+    document.getElementById("demo").value = y
+    }
+
+    function clr() {
+        document.getElementById('demo').value = ""
+    }
+
+    // function del() {
+    //     document.getElementById('demo').value -1
+    // }
+
+    function del() {
+    let input = document.getElementById("demo");
+    input.value = input.value.substring(0, input.value.length - 1);
+}
+
+
+
+
+
+
+//let inp = document.getElementById('demo')
+
+// function inp(){
+//     document.getElementById("demo")
+// }
+
+
+
+
+// let inp = document.getElementById("demo")
+
+
+
+function inp(){
+  document.getElementById('demo').style.display = "none"
+}
+
+
+
+
+
+    
+
+
+   
+
+
+</script>
+

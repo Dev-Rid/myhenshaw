@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+<body>
+
+<p id="demo"></p>
+
+<input type="text" id="me"> <button onclick="clk()" >click here</button>
+<h1 id="myh"></h1>
+
+</body>
+
+
+</html>
+
+<script>
+localStorage.setItem("name","John Doe");
+document.getElementById("demo").innerHTML = localStorage.getItem("name");
+
+    function clk() {
+        document.getElementById("me").innerText = " "
+        //localStorage.setItem("suname", 'ridwan');
+        document.getElementById("myh").innerHTML = localStorage.getItem("suname")
+
+    }
+    
+
+
+</script>

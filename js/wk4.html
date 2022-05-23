@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 50px;
+            width: 300px;
+            background-color:wheat;
+            border-radius: 9px;
+
+        }
+
+        button{
+            width: 100px;
+            height: 50px;
+            border-radius: 9px;
+            background-color: orange;
+        }
+
+        body{
+            background-color:wheat;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="key" placeholder="enter key">
+
+    <button onclick="getstoredUserName()">click</button>
+
+    <input type="text" id="value" placeholder="enter value">
+
+    <button onclick="storeUserName()">click me</button>
+   
+
+    
+</body>
+</html>
+
+<script>
+
+    // function storeUserName() {
+    //     let key = document.getElementById("key")
+    //     let value = document.getElementById("value")
+    //     localStorage.setItem(key.value, value.value)
+
+    // }
+
+    function storeUserName() {
+        let data = document.getElementById("key")
+        let value = document.getElementById("value")
+        localStorage.setItem(key.value, value.value)
+
+    }
+
+    function getstoredUserName()   {   
+        let item = localStorage.getItem("username")
+        console.log(item)
+    }
+
+
+    
+    function getstoredUserName() {
+    
+    if (localStorage.getItem("username")) {
+        alert("it's there")
+    } else{
+        alert("it's not there")
+    }
+    }
+</script>

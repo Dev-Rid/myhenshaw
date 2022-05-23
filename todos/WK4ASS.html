@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+    <link rel="stylesheet" href="todos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\JAVASCRIPT\todos\todos.css">
+
+    <!-- <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+     -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <style>
+
+body{
+    background: #352f5b;
+}
+.container{
+    
+    max-width: 400px;
+}
+/* input[type=text],
+input[type=text]:focu{
+    color: #fff;
+    border: none;
+    background: rgb(0,0,0,0.2);
+    max-width: 400px;
+
+} */
+.todos li{
+  color: #fff;
+    background: #423a6f;
+}
+
+.delete{
+    cursor: pointer;
+}
+
+button{
+    background-color: purple;
+}
+
+ul{
+    width: 400px;
+    height: 00px;
+}
+d1{
+    border: 1px solid wheat;
+    background:purple ;
+    width: 400px;
+    height: 500px;
+
+}
+
+  </style>
+
+</head>
+
+
+<body id="body">
+
+<div class="container">
+
+    <header class="text-center text-light my-4">
+        <h1 class="mb-4"> bank info </h1>
+
+            <!-- <form class="search">
+                 <input type="text" class="form-control m-auto" type="search" placeholder="search todo">
+            </form> -->
+  
+    </header>
+
+    <!-- <div id="d1">
+        <div id="dd1">
+            <span>  ACCOUNT NAME  <input type="text"> </span> 
+
+            <span>  ACCOUNT NAME  <input type="text"> </span>
+
+            <span>  ACCOUNT NAME  <input type="text"> </span>
+
+        
+            
+        </div>
+
+        <div>
+
+
+
+        </div>
+    </div> -->
+    <ul class="list-group todos mx-auto text-light" >
+      
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>ACCOUNT NAME</span>
+       <input type="text">
+        <i class="far fa-trash-alt delete"></i>
+      </li>
+
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>ACCOUNT NUMBER </span>
+        <input type="text">
+        <i class="far fa-trash-alt delete"></i>
+      </li>
+
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <button >SUBMIT</button>
+        <i class="far fa-trash-alt delete"></i>
+      </li>
+
+    </ul> -->
+    
+     <form action="" class="add text-center my-4">
+      <label for="" class="text-light">add a to do list</label>
+      <input type="text" class="form-control auto" name="add">
+    </form>
+
+    <table></table>
+</div>
+    
+</body>
+</html>
+
+<!-- <script>
+  const addForm = document.getElementById(".add");
+
+  addForm.addEventListener('submit', e=> {
+    e.preventDefault();
+
+const todo = addForm.add.value;
+
+console.log(todo);
+
+});
+
+</script> -->
+<!-- 
+<script>
+
+const addForm = document.querySelector(' .add')
+const list = document.querySelector('.todos')
+const search = document.querySelector('.search input');
+
+
+
+
+
+const generateTemplate = (todo) => {
+  const html = ` <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>${todo}</span>
+        <i class="far fa-trash-alt delete"></i>
+      </li>
+  `;
+
+  list.innerHTML += html;
+
+}
+
+addForm.addEventListener('submit', e => {
+
+    e.preventDefault();
+    const todo = addForm.add.value.trim();
+  
+    if(todo.length){
+      generateTemplate(todo);
+      addForm.reset();
+    }
+
+
+    console.log(todo);
+});
+
+//delete todos
+
+list.addEventListener('click', e =>{
+
+  if(e.target.classList.contains('delete')){
+    e.target.parentElement.remove();
+  } 
+
+})
+
+  const filterTodos = (term) =>{
+  // console.log(Array.from(list.children));  
+  Array.from(list.children)
+  .filter((todo)=> !todo.textContent.include(term))
+  .forEach((todos) => todo.classList.add('filtered'));
+  
+};
+
+//keyup event
+
+search.addEventListener('keyup', () =>{
+ const term = search.value.trim();
+ filterTodos(term);
+
+});
+
+</script> -->

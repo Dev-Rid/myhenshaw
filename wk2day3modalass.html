@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+    
+
+</head>
+
+<body class="p-5" style="width: 500px; height: 500px;">
+    <div style="justify-content: center; padding: 10px; height: 400px; width: 600px; background-color: blue; border-radius: 10px; ">
+
+        <h1>Get to know about us......</h1>
+        <h3>log in</h3>
+        <h4>NAME</h4> <input type="text" name="" id="" style="height: 45px; width: 250px; border-radius: 5px;">
+        <h4>PASSWORD</h4> <input type="password" style="height: 40px; width: 250px; border-radius: 5px;">
+        
+        <br> <br>
+        <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#modal1" onclick="btn()" >SIGN IN</button>        
+    
+    </div>
+
+    <form>
+        <div class="modal" id="modal1">
+            <div class="modal-dialog">     
+                <div class="modal-content" class="modal-body">              
+                    <!-- <div  style="justify-content: center; border: 1px solid blueviolet; border-radius: 9px; width: 600px; height: 480px;padding: 10px; color: black; background-color:teal;">
+                        <h1>sign up</h1>
+
+                    <h4>FIRST NAME</h4> <input type="text" style="height:45px; width:250px; border-radius: 5px;" >
+                    <h4>SURNAME</h4> <input type="text" name="" id="" style="height:45px; width:250px; border-radius: 5px;">
+                    
+                    <h4>EMAIL</h4> <input type="text" placeholder="mobile number or email address" style="height:45px; width:400px; border-radius: 5px;">
+                    <h4>PASSWORD</h4> <input type="password" name="" id="" placeholder="........." style="height:45px; width:250px; border-radius: 5px;">
+                        <br> <br>
+                    <button class="btn btn-success">back to menu</button>
+
+                </div> -->
+
+            </div>
+
+        </div>
+
+    </form>
+</body>
+
+</html>
+
+<script>
+
+    function btn(){
+        document.getElementById('modal1').innerHTML =`
+        <div  style=" margin-left:300px; justify-content: center; border: 1px solid blueviolet; border-radius: 9px; width: 600px; height: 480px;padding: 10px; color: black; background-color:teal;">
+            <h1>sign up</h1>
+
+            <h4>FIRST NAME</h4> <input type="text" style="height:45px; width:250px; border-radius: 5px;" >
+            <h4>SURNAME</h4> <input type="text" name="" id="" style="height:45px; width:250px; border-radius: 5px;">
+                    
+         <h4>EMAIL</h4> <input type="text" placeholder="mobile number or email address" style="height:45px; width:400px; border-radius: 5px;">
+                    <h4>PASSWORD</h4> <input type="password" name="" id="" placeholder="........." style="height:45px; width:250px; border-radius: 5px;">
+                        <br> <br>
+                    <button class="btn btn-success">back to menu</button>
+
+                </div>
+
+        
+        `
+    }
+</script>
+
+
+
+
+
+
+<script src="C:\Users\HP 640-G1\.vscode\extensions\js\bootstrap.bundle.js"></script>

@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+    <style>
+
+    </style>
+
+</head>
+
+<body class="p-4" style="background-color: wheat;">
+
+    
+    <div>
+        <input type="text" class="form-control">
+        <input type="date" class="form-control">
+        <button id="addBtn" class="btn btn-outline-danger">Add</button>
+    </div>
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Description </th>
+            
+                <th>Date </th>
+            
+                <th> </th>
+              
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+    </table>
+    
+</body>
+</html>
+
+<script>
+    document.getElementById('addBtn').addEventListener('click', addTodo)
+
+function addTodo() {
+    document.getElementsByTagName('tbody')[0].innerHTML += `
+    <tr>
+        <td>${document.getElementsByTagName('input')[0].value}</td>
+        <td>${document.getElementsByTagName('input')[1].value}</td>
+        <td>
+            <button class="delBtn btn btn-outline-primary"> DEL</button>
+        </td>
+
+        <td>
+            <button class="editBtn btn btn-outline-info"> EDIT</button>
+        </td>
+
+    </tr> `
+    ;
+
+    let editBtn = document.getElementsByClassName('editBtn')
+        for (let index = 0; index < editBtn.length; index++) {
+            editBtn[index].addEventListener('click', edit)
+            
+        }
+
+    let delBtn = document.getElementsByClassName('delBtn');
+
+    for (let index = 0; index < delBtn.length; index++){
+        delBtn[index].addEventListener('click', delAction)
+    }    
+
+}
+
+    // for (let index = 0; index < delBtn.length; index++){
+    //     delBtn[index].addEventlistener('click', (event)=>{
+    //         event.terget.nextElementSibling.nextElementSibling.style.backgroundColor="red"
+    //     })
+//}
+
+function delAction(event){
+    event.target.closest('tr').remove()
+}
+
+function edit(event) {
+    event.target.closest('tr').children[0].contentEditable ="true"
+    event.target.closest('tr').children[0].focus()
+
+}
+
+
+
+
+
+
+
+
+
+
+</script>

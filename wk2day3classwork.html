@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+    <style>
+/* 
+        .you{
+            display: flex;
+            justify-content: space-between;
+        } */
+
+    </style>
+</head>    
+
+<body style="background-color: wheat;">
+
+
+    <main class="container-fluid mt-2 card" style="width: 400px; height: 500px; border-radius: 20px; border: 3px solid black; background-color: teal;" >
+
+        <div class="text-center mt-5" style="justify-content:space-evenly;" >
+            <button class="btn btn-light" onclick="change()" style="background-color: teal;" >sign up</button>
+         
+        </div>
+
+
+        <div id="d2" class="text-center mt-5" >
+           
+        </div>
+
+        <div id="d2" class="text-center mt-5">
+
+          <p id="d2"></p>
+
+        </div>
+        
+    </main>
+</body>
+</html>
+
+<script>
+
+    function change() {
+        
+        document.getElementById("d2").innerHTML =`
+        <h1>create your account</h1>
+        <p>welcome please! input your data</p>
+        <div>
+           
+            <input type="text" placeholder="email address" class="form-control w-30 mx-auto" > <br>
+            <input type="text" placeholder="phone number" class=" mb-3 form-control w-30 mx-auto" id="inp2" >
+
+            <button class="btn btn-light" onclick="reverse()" style="background-color: teal;">sign in</button>
+            
+            `
+        
+    }
+
+
+    function reverse() {
+        document.getElementById("d2").innerHTML =`
+        <h1>log in into your account</h1>
+        <p>welcome back! enter your info</p>
+            <input type="text" placeholder="email address" class="form-control w-30 mx-auto" > <br>
+            <input type="text" placeholder="password" class="form-control w-30 mx-auto"> <br> <br>
+
+            <button  class="btn btn-light" onclick="chrev()" style="background-color: teal;" >go to dashboard</button> 
+           
+            `
+    }
+
+
+
+    const input = document.getElementById("input")
+    const screen = document.getElementById("screen")
+
+    function chrev() {
+        
+       let input = document.getElementById("d2")
+         if (input.value == " "){
+            return screen.innerText = "not successful"
+             
+         }else{ screen.innerText = "successful"
+        //document.getElementById(" ").style.display ="none"
+
+         }
+
+
+    
+        document.getElementById("d2").innerHTML = `
+       
+        <h1>DASH BOARD</h1>
+        <input type="text" placeholder="successful/unsuccessful" id"dd">
+            `
+    } 
+
+
+
+
+
+
+
+
+
+   // let input = document.getElementById("d2")
+          // if (input.value == ""){
+        //     return screen.innerHTML = "not successful"
+        // }else{
+        //     screen.innerHTML = "successful"
+        // }
+
+
+
+    // function chrev() {
+    //     let pub = document.getElementById('inp2').value
+    //     if (pub.length <= 8 ) {
+    //         document.getElementById('dash').inn = ' successful'
+    //     } else{
+    //         document.getElementById('inp2') = 'alert(unsuccessful)'
+    //     }
+
+    //     document.getElementById('d2').innerHTML = `
+    //     <h2 style="color: purple; font-size: 30px; ">DASHBOARD</h2>
+
+    //     <p style="color: crimpson;">we're looking forward to trading with you dear customer</p>
+
+    //     <h1 style="color: crimson; font-size: 30px;" id="dash"> </h1>
+    //     `
+    
+    // }
+
+</script>

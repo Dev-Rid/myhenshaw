@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+</head>
+
+    
+<body class="p-5">
+
+    <input type="text" id="txt" >
+
+    <button class="btn btn-danger" onclick="show()">clear</button>
+
+    <button class="btn btn-danger" onclick="show()">delete</button>
+
+    
+</body>
+
+</html>
+
+<script>
+
+  function show(){
+      const text = document.getElementById('txt');
+      let r = String(text.value)
+
+      text.value = r.substring(-1, -4)
+  }
+
+  function show(){
+      const delet = document.getElementById('txt');
+      let d = String(text.value)
+
+      delet.value = d.Slice(0, -1)
+  }
+
+
+//   function show(){
+//   const text =  document.getElementById('text')
+
+//   let strlength = String(text.value).length - 1
+
+//   text.value = String(text.value).substr(0, strlength);
+
+//   }
+
+
+//repalce
+
+
+
+//  function show(){
+
+//      const sent = `
+//  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed officiis porro 
+//  reiciendis nihil, consequuntur asperiores
+// tempora dicta iste, atque sunt deserunt a aliquam nam animi. Veniam
+//  doloremque exercitationem porro a.`;
+
+// let new_sent = sent.replace(/IPsum/ig. "badguy")
+
+// //let new_sent = sent.replace("IPsum". "badguy")
+
+//     console.log(new_sent)
+//  }
+
+
+
+
+//scope
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+    
+
+</html>

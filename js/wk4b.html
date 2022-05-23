@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 50px;
+            width: 300px;
+            background-color:coral;
+            border-radius: 9px;
+
+        }
+
+        button{
+            width: 100px;
+            height: 50px;
+            border-radius: 9px;
+            background-color:crimson;
+        }
+    </style>
+
+</head>
+<body>
+<body>
+    <button onclick="storeemail()">click</button>
+
+    <input type="text" id="store" placeholder="enter key">
+
+    <button onclick="getemail()">login </button> 
+
+    <input type="text" id="reveal" placeholder="enter value">
+
+  
+   
+
+    
+</body>
+
+
+
+    
+</body>
+</html>
+
+<script>
+
+    let data = []
+    function storeemail(){
+        let signup = document.getElementById("store")
+
+        if (signup.value != " ") {
+            data.push(signup.value)
+            localStorage.setItem("user", JSON.stringify(data))
+        }
+        else{reveal.innerText = "input an email"}
+    }
+
+
+    function getemail() {
+        let reveal = document.getElementById("reveal")
+        let gotten = localStorage.getItem("user")
+        console.log(gotten)
+        let get = document.getElementById("get")
+        let stringify = JSON.parse(gotten)
+
+        if(stringtoarray.includes('get.value')) {
+            reveal.innerText = "login successful"
+        } 
+        
+        else{
+            reveal.innerText = "login not successful"
+        }
+    }
+</script>

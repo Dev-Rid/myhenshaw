@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="showcase">
+
+    </div>
+    
+    <button class="btn btn-outline-danger m-5 btn-lg btn-block  " onclick="addToArr()">ADD </button>
+
+    
+</body>
+</html>
+
+<script>
+    
+    let data = []
+
+     function addToArr() {
+        let name = prompt ("enter a name")
+        let country = prompt("now enter a country")
+
+        let obj = {name: name, country:country};
+       data.push (obj)
+        data.push (obj)
+
+        addToScreen();
+     }
+
+
+    function addToScreen() {
+        //remove from screen
+        document.getElementById("showcase").innerHTML = " ";
+     
+        data.map((value, index) => {
+            document.getElementById("showcase").innerHTML += `
+            <main style="padding: 10px">
+                <h1> ${value.name} </h1>
+                <p> ${value.country} </p>
+                
+                <button onclick="removeItem(${index})">remove </button>
+            </main>
+
+            `;
+        })
+    }
+
+    function removeItem(index){
+        data.splice(index, 1)
+        addToScreen()
+    }
+
+</script>

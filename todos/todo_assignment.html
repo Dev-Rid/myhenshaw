@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>to do list</title>
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+<style>
+    body{
+    background: #352f5b;
+}
+
+#for{
+    color: white;
+    max-width: 400px;
+    color: #fff;
+    background: #423a6f;
+}
+
+.myd{
+    align-items: center;
+    max-width: 400px;
+    background: #423a6f;
+    margin-top: 20px;
+    margin-left: 370px;
+
+}
+
+</style>
+</head>
+<body class="p-4">
+    <form onsubmit="replaceContent(event)" class="w-75 mx-auto p-4 list-group mx-auto todos text-light" id="for">
+        ACCOUNT NAME <input type="text" class="form-control" id="title">
+        <br>
+        ACCOUNT NUMBER <input type="text" class="form-control" id="desc">
+        <br>
+        DATE <input type="date" class="form-control" id="date">
+        
+        <!-- <button type="button" class="btn btn-primary" onclick="addBefore()">Add before</button> -->
+        <button type="button" class="btn btn-secondary" onclick="addAfter()"> show</button>
+        <!-- <button class="btn btn-danger delete" onclick="del()" >DEL</buttton> -->
+         
+        <!-- <button class="btn btn-warning">Replace content</button>
+        <button type="button" class="btn btn-danger" onclick="clearAll()">clear all</button> -->
+      
+
+    </form>
+
+
+    <div class="myd">
+        <h1 >result</h1>
+        <table id="panel" class="table"></table>
+    </div>
+
+    
+</body>
+</html>
+
+<script>
+
+let data = []
+
+function addToArr() {
+
+   // let obj = {name: name, country:country};
+    
+   let obj = {title: value, desc:value}
+   
+   data.push (obj)
+
+}
+
+
+
+    function addAfter() {
+        const title = document.getElementById("title");
+        const desc = document.getElementById("desc");
+        const date = document.getElementById("date");
+
+        document.getElementById("panel").innerHTML  += `
+        <tr>
+            <td>${title.value}</td>
+            <td style"width:450px">${desc.value}</td>
+            <td>${date.value}</td>
+
+        </tr>
+        `;
+
+       
+     
+
+        }
+
+
+
+    // function addAfter() {
+    //     const title = document.getElementById("title");
+    //     const desc = document.getElementById("desc");
+    //     // const date = document.getElementById("date");
+    //     // const list = document.querySelector('.todos');
+
+    //     document.getElementById("panel").innerHTML  += `
+    //     <tr style="max-width:400px;">
+    //        <div> <td style="background-color:gold;"> ${title.value}  </td> 
+    //         <button class="btn btn-danger delete" onclick="del()" >DEL</buttton> 
+    //         </div>
+    //         <td style="background-color:silver;"> ${desc.value} </td>
+    //         <td style="background-color:violet;"> ${date.value} </td>
+        
+    //         <button onclick="removeItem(${index})">remove </button>
+    //     </tr>
+    //     `;
+  
+    //     localStorage.setItem(title.value, desc.value, date.value);
+            
+     
+    //     }
+
+                 
+    function removeItem(index){
+        data.splice(index, 1)
+        addToScreen()
+    
+    }
+            localStorage.removeItem(title.value, desc.value, date.value);
+
+
+
+
+
+        //console.log(localStorage);
+
+        
+
+//         list.addEventListener('click', e =>{
+
+// if(e.target.classList.contains('delete')){
+//     e.target.parentElement.remove();
+// } 
+
+// })
+
+// function del() {
+//     let input = document.getElementById("panel");
+//     input.value = input.value.substring(0, input.value.length - 1);
+// }
+
+</script>

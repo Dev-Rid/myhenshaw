@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+   main{ 
+       /* border-radius: 9px;
+       border: 5px solid teal;  */
+       width: 300px; 
+       height: 500px;
+       background-color: whitesmoke;
+       margin: 10px;
+
+   }
+
+    button{
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        margin: 5px;
+    }
+
+    #edu{
+        height: 50px;
+        width: 300px;
+        border-radius: 9px;
+    }
+
+    input{
+        
+        border-radius: 9px;
+        justify-content: center;
+    }
+</style>
+
+<body>
+
+    <main >
+
+
+    
+        <input type="text" id="edu"/>
+
+        <br> <br>
+    
+    <!-- <input value="c" onclick="clr()"/>  -->
+
+  <button value="c" onclick="clr()">clr </button>
+
+  <button value="c" onclick="del()">DEL </button>
+    
+    <!-- clr() function will call clr to clear all value -->
+    
+        <br> <br>
+    <!-- creating buttons and assigning values-->
+
+
+    <button  value="+" onclick="dis('+')">+ </button>
+    <button value="1" onclick="dis('1')"> 1</button>
+    <button  value="2" onclick="dis('2')"> 2</button>
+    <button  value="3" onclick="dis('3')">3 </button>
+    
+    <br> <br>
+    <button value="-" onclick="dis('-')"> - </button>
+    <button value="4" onclick="dis('4')"> 4 </button>
+    <button value="5" onclick="dis('5')"> 5 </button>
+    <button  value="6" onclick="dis('6')">6 </button>
+    
+
+    <br> <br>
+
+    <button value="*" onclick="dis('*')"> * </button>
+    <button value="7" onclick="dis('7')"> 7 </button>
+    <button  value="8" onclick="dis('8')">8 </button>
+    <button value="9" onclick="dis('9')"> 9 </button>
+    
+    <br><br>
+
+    <button value="/" onclick="dis('/')" >/ </button>
+    <button value="." onclick="dis('.')"> . </button>
+    <button  value="0" onclick="dis('0')">0 </button>
+    <!-- Evaluating function call eval()-->
+    <button  value="=" onclick="solve()"/> =</button>    </tr>
+    
+    </div>
+
+</main>
+
+</body>
+
+    
+
+</html>
+
+<script>
+
+function dis(val) {
+document.getElementById("edu").value += val
+ }
+
+//function for evaluation
+function solve(){
+let x = document.getElementById("edu").value
+let y = eval(x)
+document.getElementById("edu").value = y
+
+}
+//function for clearing the display
+function clr()
+{
+document.getElementById("edu").value = ""
+}
+
+function del() {
+    var input = document.getElementById("edu");
+    input.value = input.value.substring(0, input.value.length - 1);
+}
+</script>

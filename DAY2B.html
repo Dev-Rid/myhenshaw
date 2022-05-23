@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event and function </title>
+   <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+   <style>
+
+       .circle{
+           width: 100px;
+           height: 100px;
+           border-radius: 50px;
+           /* transform: skew(250deg, 250deg) rotate(45deg); */
+            transition: 3s;
+           /* transform: skew(180deg, 180deg) rotate(45deg); */
+           
+           margin: 50px;
+            
+       }
+
+   </style>
+
+</head>
+<body>
+
+    <h1 id="traffic"> welcome to trafffica</h1>
+
+
+
+    <div id="circle" class="circle"></div>
+
+    
+ <button class="btn btn-danger"  onclick="stop()">stop</button>
+ <button class="btn btn-warning"  onclick="ready()">get ready</button>
+ <button class="btn btn-success"  onclick="go()">move</button>
+
+
+
+</body>
+
+
+
+</html>
+
+<script>
+
+function stop(){
+    document.getElementById('circle').innerHTML= `<h2>stop</h2>`   
+    document.getElementById('circle').style.color= !'red'
+    document.getElementById('circle').style.backgroundColor='red'
+    
+}
+
+
+
+function ready(){
+    document.getElementById('circle').innerHTML= `<h2>get ready</h2>`
+    document.getElementById('circle').style.color= !'yellow'
+    document.getElementById('circle').style.backgroundColor='yellow'
+}
+
+function go(){
+    document.getElementById('circle').innerHTML= `<h2>go</h2>`
+    document.getElementById('circle').style.color= !'green'
+    document.getElementById('circle').style.backgroundColor='green'
+}
+
+</script>
+
+<script src="js/bootstrap.bundle.js"></script>

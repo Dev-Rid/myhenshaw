@@ -1,0 +1,194 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up, sign-in, dashboard assignment</title>
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+
+    <style>
+        /* .wrap{
+            display: inline-flex;
+          
+
+
+        } */
+
+     
+
+        .btn1{
+            height: 50px;
+            width: 120px;
+            border-radius: 9px;
+            border-color: thistle; 
+            
+            background-color: teal;
+        }
+        .btn2{
+            height: 50px;
+            width: 120px;
+            border-radius: 9px;
+            border-color: thistle;
+            background-color:purple ;
+            margin: 80px;
+        }
+        input{
+            height: 40px;
+            width: 300px;
+            border-radius: 9px;
+        
+        }
+        .elm1{
+            
+            text-align: center;
+            
+            
+        }
+
+        .d1{
+            /* flex-flow: row wrap; */
+            height: 500px;
+            width: 400px;
+            background-color: teal;
+            border-radius: 15px;
+            margin: 50px; 
+                
+
+        }
+        .d2{
+
+            height: 500px;
+            width: 400px;
+            background-color: purple;
+            border-radius: 15px;
+            margin: 50px;
+        }
+
+        .elm2{
+            text-align: center;
+            
+            
+        }
+
+        .d3{
+            background-color: rgb(177, 145, 85);
+            
+            margin-top: 500px;
+           
+            /* height: 1000px;
+            width: 100%;
+            display: flex;
+
+            background-color: rgb(240, 201, 130);" */
+        }
+
+        .d3d1{
+            background-color:grey;
+            height:800px ;
+            width:200px ;
+            
+        
+        }
+        .d3d2{
+            background-color: rgba(245, 222, 179, 0.123);
+            height: 800px;
+            width: 1500px; 
+            
+        
+        }
+
+
+    </style>
+</head>
+<body style="background-color: wheat;">
+
+    <button onclick="signup()">sign-up</button> <button onclick="login()">log in</button>
+
+<main>
+    <div id="d1" > 
+    
+        <!-- <div class="d1" >
+            <div class="elm1">
+            <h2>Sign up</h2>
+            <br> <br>
+          
+            <h3>E-mail</h3> <input type="email" placeholder=" e.g ridwanabiola2000@gmail.com" id="h2"> 
+           
+           <h3>Password</h3><input type="password" placeholder="at least 8 characters" id="h3">
+           
+           <h3>Confirm password</h3> <input type="password" placeholder="at least 8 characters" id="h4">
+            <br> <br>
+           <button class="btn1" onclick="click()">  SIGN ME UP  </button>
+            </div>
+    
+        </div> -->
+        
+    </div> 
+
+    <div id="d2" > </div> 
+    
+</main>
+    <!-- <div>
+
+
+        <div class="d3">
+
+            <div class="d3d1">
+           
+            </div>
+            <div class="d3d2">
+
+        </div>
+
+
+    </div>
+     -->
+
+</body>
+</html>
+
+<script>
+
+    function signup() {
+        document.getElementById("d1").innerHTML = `
+        <div class="d1" >
+            <div class="elm1">
+            <h2>Sign up</h2>
+            <br> <br>
+          
+            <h3>E-mail</h3> <input type="email" placeholder=" e.g ridwanabiola2000@gmail.com" id="h2"> 
+           
+           <h3>Password</h3><input type="password" placeholder="at least 8 characters" id="h3">
+           
+           <h3>Confirm password</h3> <input type="password" placeholder="at least 8 characters" id="h4">
+            <br> <br>
+
+            </div>
+    
+        </div>
+        `
+    }
+
+    function login() {
+        document.getElementById("d2").innerHTML =  `
+        <div class="d2" >
+            <div class="elm2">        
+            <h2>Sign in</h2>
+            <br> <br>
+
+            <h3>Username</h3> <input type="text" placeholder="e.g abiola ridwan" >
+
+            <h3>E-mail</h3> <input type="text" placeholder="e.g ridwanabiola2000@gmail.com">
+
+            <h3>Password</h3> <input type="text" placeholder="..........">
+            <br> <br>
+            <button class="btn2" onclick="second()">log in</button>
+
+            </div>
+            
+        </div>
+        `
+}
+
+    
+</script>

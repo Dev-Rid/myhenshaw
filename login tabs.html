@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        .all{
+            width: 600px;
+        }
+        .mee{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        main{
+           text-align: center;
+           justify-content: center;
+        }
+
+        .tabcontent{
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .tab-button{
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+
+        }
+        .tablinks{
+            background-color: blue;
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .clod{
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: blue;
+            margin-top: 10px;
+            width: 150px;
+            height: 50px;
+            border-radius: 20px 0px 20px 0px;
+        }
+        #reverse{
+            display: none;
+        }
+        .tablinks:focus{
+            color: black;
+            background-color:gold;
+        }
+        .dashboard{
+            margin-top: 30px;
+            display: none;
+        }
+        .log{
+            width: 100px;
+            color: black;
+            background-color: gold;
+            height: 40px;
+            font-weight: bold;
+            border-radius: 10px;
+            display: none;
+            
+
+        }
+        .log:hover{
+            color: gold;
+            background-color: black;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="all">
+            <div class="mee">
+                <button class="tablinks " id="number1" onclick="login(event,'sign in')">Sign Up </button>
+                <button class="tablinks " id="number2" onclick="signup(event, 'sign up')">Log In</button>
+                <button class="tablinks " id="number3" onclick="dash(event, 'sign up')">Dashboard</button>
+            </div>
+    
+    
+            <div id="change" class="tabcontent">
+                <h2>Welcome to the signup page</h2>
+                <p class="">create your account</p>
+                <div >
+                    <input id="user" type="email" placeholder="Email Address or Username" class="form-control"><br>
+                    <input id="name" type="name" placeholder="First name" class="form-control "><br>
+                    <input id="pass" type="password" placeholder="Password" class="form-control w-30 mx-auto"><br>
+                    <h2 id="screen" ></h2>
+                    <button class="clod " onclick="result()" style="border-radius: 0% 10px 0px 10px;">Submit</button>
+                </div>
+            </div>
+    
+    
+    
+    
+    
+            
+                <div id="reverse" class="tabcontent ">
+                    <h2>Welcome to the login page</h2>
+                    <p class=""> Login into your account</p>
+                    <div >
+                        <input type="name" placeholder="username" id="username" class="form-control"><br>
+                        <input type="password" placeholder="Password" class="form-control w-30 mx-auto"><br>
+                        <h2 id="scree" ></h2>
+                        <button onclick="secondResult()" class="clod ">Submit</button>
+                    </div>
+                </div>
+
+                <div id="show"   class="dashboard">
+    
+                </div>
+                
+        </div>
+        
+        <button id="log" onclick="logout()" class="log">Logout</button>
+
+    </main>
+</body>
+</html>
+<script>
+    
+    function login() {
+
+        document.getElementById('show').style.display="none"
+        document.getElementById('change').style.display="block"
+        document.getElementById('reverse').style.display="none"
+        document.getElementById('log').style.display="none"
+
+        // document.getElementById('change').id.remove('reverse');
+        
+}
+
+
+
+    function signup() {
+        document.getElementById('show').style.display="none"
+        document.getElementById('reverse').style.display="block"
+        document.getElementById('change').style.display="none"
+        document.getElementById('log').style.display="none"
+
+        // document.getElementById('reverse').id.remove('change');
+    }
+    
+    // function result(){
+    //     let emai = document.getElementById("user")
+    //     localStorage.setItem("user" , emai.value);
+    //     if(pass.value == ""){
+    //         return screen.innerText="input data"
+    //     }else{
+    //         document.getElementById('show').style.display="none"
+    //         document.getElementById('reverse').style.display="block"
+    //         document.getElementById('log').style.display="none"
+    //         document.getElementById('change').style.display="none"
+    // }
+
+    // }
+
+    let pass = document.getElementById('pass')
+    let screen = document.getElementById('screen')
+
+
+
+   function result() {
+        let emai = document.getElementById("user")
+        localStorage.setItem("user" , emai.value);
+        // document.getElementById("reverse").reset();
+        if(pass.value == ""){
+           return screen.innerText="input data"
+       }else{
+        document.getElementById('show').style.display="none"
+        document.getElementById('reverse').style.display="block"
+        document.getElementById('log').style.display="none"
+        document.getElementById('change').style.display="none"
+    }
+    
+        
+        
+   }
+
+
+   let scree = document.getElementById('scree')
+
+    function secondResult() {
+        let email = document.getElementById('username')
+        let screen = document.getElementById('screen')
+        let show = document.getElementById('show')
+        if (localStorage.getItem ("user")) {
+             let provider  = localStorage.getItem('user')
+             //return screen.innerText = "not successful"
+
+          if(provider == email.value){
+             document.getElementById('reverse').style.display="none"
+             document.getElementById('change').style.display="none"
+             document.getElementById('show').style.display=" block"
+             document.getElementById('log').style.display=" block"
+             document.getElementById("show").innerText = "Welcome" + " " + email.value
+         }
+        
+        else{ screen.innerText = "wrong username or password"
+        
+     }
+        }
+
+    }
+
+
+    function logout(){
+        document.getElementById('show').style.display="none"
+        document.getElementById('reverse').style.display="none"
+        document.getElementById('change').style.display="block"
+        document.getElementById('log').style.display="none"
+
+    }
+
+    function dash(){
+        document.getElementById('show').style.display="block"
+        document.getElementById('reverse').style.display="none"
+        document.getElementById('change').style.display="none"
+        document.getElementById('log').style.display="block"
+    }
+   
+
+
+    
+       
+
+
+
+
+   
+
+
+
+
+   
+</script>
+<!-- mark down cheat -->

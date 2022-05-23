@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 250px;
+            height: 50px;
+            margin: 50px;
+            border: 3px solid tan;
+            border-radius: 9px;
+            color: blue;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: crimson;
+            color:blueviolet;
+        }
+        h1{
+            color: blue;
+
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="input" placeholder="password btw 1 to 10">
+
+    <button onclick="login()">login</button>
+    <button onclick="signup()">signup</button>
+
+    <input id="screen" placeholder="result "> 
+    
+</body>
+</html>
+
+<script>
+
+  //  let password = 15
+
+    // function login() {
+    //     if (password >= 15){
+    //         document.getElementById('in').innerHTML = "successful ";
+    //     }
+    //     else {
+    //         document.getElementById('screen').innerHTML = "unsuccessful";
+    //         }
+
+    //     }
+
+        
+        
+
+
+        function login() {
+    //var x, text;
+
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("input").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (isNaN(x) || x < 1 || x > 10) {
+        text = "not successful";
+    } else {
+        text = "successful";
+    }
+    document.getElementById("screen").innerHTML = text;
+}
+
+
+
+
+
+    
+
+    // const input = document.getElementById ("input")
+    // const screen = document.getElementById("screen");
+
+    // function signup(){
+    // if(input.value == " "){
+    //    // screen.innerText = "not successful"
+    //     document.getElementById('screen').innerHTML = "unsuccessful"
+    // }
+    // else (screen.value == "")
+    //     screen.innerText = "signup successful"
+    // }
+    
+
+
+
+    
+    // function login(){
+
+    //     if(input.value == ""){
+    //         return screen.innerText ="data is empty"
+    //     }
+
+    //     if(input.value != "samuel") {
+    //         return screen.innerText = "name incorrect"
+    //     }
+
+    //     screen.innerText = "login sucessful"
+    // }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+</script>

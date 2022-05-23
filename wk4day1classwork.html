@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>toggle</title>
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+    <style>
+
+        h1{
+            color: rgb(193, 0, 177);
+            height: 200px;
+            width:  300px;
+            border-radius: 10px;
+            margin:50px;
+
+            transition: 3s;
+        }
+    </style>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <button class="btn btn-secondary p-4 m-4" onclick= "change()" id="pa" >play</button>
+ 
+
+    <h1 id=disp>  </h1>
+    
+   
+    
+</body>
+
+</html>
+
+
+<script>
+
+    
+const disp = document.getElementById("disp")
+
+    function change() {
+
+    if( disp.innerHTML == "video is playing" ){
+        disp.innerHTML = "video is paused"
+        alert('passsword correct')
+        disp.style.backgroundColor ='blue'
+        pa.innerHTML = "play"
+
+    } else if(disp.innerText = "video is paused"){
+        disp.innerHTML =  "video is playing";
+        disp.style.backgroundColor = 'red'
+        pa.innerHTML = "pause";
+
+    }
+
+    }
+     
+//const disp = document.getElementById("disp")
+
+// const toggle = true
+
+// function change() {
+
+// if( toggle ==true ){
+// document.getElementById("disp").innerText = "video is paused"
+// document.getElementByI("disp") = "play"
+// toggle = false
+
+// } else if(toggle == false){
+// document.getElementById("disp").innerText =  "video is playing";
+// document.getElementById)("disp") = "pause";
+// toggle = true
+
+// }
+
+
+
+
+</script>

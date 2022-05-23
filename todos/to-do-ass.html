@@ -1,0 +1,288 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+<style>
+    .d1 {
+          
+            /* border: 3px solid #c3c3c3; */
+            border-radius: 11px;
+            justify-items:center;
+            margin: 20px;
+            margin-left: 50px;
+}
+
+input{
+    width: 300px;
+    height: 48px;
+    border-radius: 9px;
+}
+</style>
+</head>
+
+
+<body>
+ <div class="d1">
+     
+   <input type="text">    <button class="btn btn-outline-danger btn-lg" onclick="addToArr()">ADD</button>
+      
+</div>
+       <hr>
+
+       <div id="showme"></div>
+
+
+
+ 
+
+
+
+    
+</body>
+</html>
+
+<script>
+
+
+    let data = []
+
+     function addToArr() {
+         prompt ("enter an item")
+        prompt ("describe item")
+
+        let obj = {name: name, description: description};
+        
+        data.push (obj)
+
+        addToScreen();
+     }
+
+     function addToScreen() {
+        //remove from screen
+        document.getElementById("showcase").innerHTML = " ";
+     
+        data.map((value, index) => {
+            document.getElementById("showme").innerHTML += `
+            <main style="padding: 10px">
+                <h1> ${value.name} </h1>
+                <p> ${value.description} </p>
+                
+                <button onclick="removeItem(${index})">remove </button>
+            </main>
+
+            `;
+        })
+    }
+
+</script> -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>to do list</title>
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+
+<style>
+    body{
+        background: rgba(14, 78, 78, 0.674);
+    /* background: #352f5b; */
+}
+
+#for{
+    color: white;
+    max-width: 400px;
+    color: #fff;
+    background: teal;
+    /* background: #423a6f; */
+}
+
+.myd{
+    align-items: center;
+    max-width: 400px;
+     background: rgba(0, 128, 128, 0.121);
+    margin-top: 20px;
+    margin-left: 370px;
+    align-content: center;
+
+}
+
+</style>
+</head>
+<body class="p-4">
+    <form onsubmit="replaceContent(event)" class="w-75 mx-auto p-4 list-group mx-auto todos text-light" id="for">
+        
+                
+        item <input type="text" class="form-control" id="title">
+        
+        <br>
+        description <input type="text" class="form-control" id="desc">
+    
+        <button type="button" class="btn btn-secondary" onclick="addAfter()"> show</button>
+        <!-- <button class="btn btn-danger delete" onclick="del()" >DEL</buttton> -->
+         
+        <!-- <button class="btn btn-warning">Replace content</button>
+        <button type="button" class="btn btn-danger" onclick="clearAll()">clear all</button> -->
+      
+        </ul>
+    </form>
+
+    <div contenteditable="" >
+
+
+    </div>
+
+
+    <div class="myd">
+        <h1 >result</h1>
+        <table id="panel" class="table"></table>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    // const list = document.querySelector("todos")
+
+    // list.addEventListener("click", e =>{
+    //     if(e.target.classList.contains('delete')){
+    //          e.terget.parentElement.removeChild();
+    //     }
+    // })
+
+
+
+
+
+
+
+
+
+let data = []
+
+function addToArr() {
+
+   // let obj = {name: name, country:country};
+    
+   let obj = {title: value, desc:value}
+   
+   data.push (obj)
+
+}
+
+
+
+    function addAfter() {
+        const title = document.getElementById("title");
+        const desc = document.getElementById("desc");
+   
+
+        document.getElementById("panel").innerHTML  += `
+        <tr style="border: 2px solid teal; color: white; display:flex" >
+             
+            <td contenteditable="">${title.value}</td>
+            <td style="background-color:teal content" contenteditable="">${desc.value} </td>
+            <i class="far fa-trash-alt delete" onclick="rmv()" > </i> 
+
+              <button onclick="rmv">click</button>
+        </tr>
+        `;
+
+        localStorage.setItem(title.value, desc.value);
+     
+
+        }
+
+        function del() {
+            localStorage.removeItem(title.value, desc.value);
+
+        }
+
+
+        
+//     e.preventDefault();
+//     const todo = addForm.add.value.trim();
+  
+//     if(todo.length){
+//       generateTemplate(todo);
+//       addForm.reset();
+//     }
+
+
+        
+//   const generateTemplate = (todo) => { 
+//   const html = ` <li class="list-group-item d-flex justify-content-between align-items-center">
+//         <span>${todo}</span>
+//         <i class="far fa-trash-alt delete"> </i>
+//       </li>
+//   `;
+
+//   list.innerHTML += html;
+
+// }
+
+
+
+    // function addAfter() {
+    //     const title = document.getElementById("title");
+    //     const desc = document.getElementById("desc");
+    //     // const date = document.getElementById("date");
+    //     // const list = document.querySelector('.todos');
+
+    //     document.getElementById("panel").innerHTML  += `
+    //     <tr style="max-width:400px;">
+    //        <div> <td style="background-color:gold;"> ${title.value}  </td> 
+    //         <button class="btn btn-danger delete" onclick="del()" >DEL</buttton> 
+    //         </div>
+    //         <td style="background-color:silver;"> ${desc.value} </td>
+    //         <td style="background-color:violet;"> ${date.value} </td>
+        
+    //         <button onclick="removeItem(${index})">remove </button>
+    //     </tr>
+    //     `;
+  
+    //     localStorage.setItem(title.value, desc.value, date.value);
+            
+     
+    //     }
+
+                 
+    function removeItem(index){
+        data.splice(index, 1)
+        addToScreen()
+    
+    }
+            localStorage.removeItem(title.value, desc.value);
+
+
+
+
+
+        //console.log(localStorage);
+
+        
+
+//         list.addEventListener('click', e =>{
+
+// if(e.target.classList.contains('delete')){
+//     e.target.parentElement.remove();
+// } 
+
+// })
+
+// function del() {
+//     let input = document.getElementById("panel");
+//     input.value = input.value.substring(0, input.value.length - 1);
+// }
+
+</script>

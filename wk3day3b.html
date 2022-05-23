@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+</head>
+
+<style>
+    div{
+        transition: all 0.1s; 
+    }
+</style>
+
+
+<body ondrag="trigger(event)">
+
+    <div id="navbar1" class="p-3 navbar sticky-top">
+
+        <h1>i am here</h1>
+        
+    </div>
+
+
+
+
+    <h1 id="box" class="p-5 bg-danger" style=" " >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odio
+    dolore cum magnam voluptatum similique aperiam accusantium, soluta ratione eum
+    inventore, tempore quod doloremque illum. Aut, velit vitae. Voluptates, expedita
+        
+    </h1>
+</body>
+</html>
+
+
+<script>
+
+    // function trigger(event) {
+    //     if(event.keyCode == 37){
+    //         document.getElementById('box').style.transform = `translateX(-20px)`;
+    //     }
+    //     else if(event.keyCode == 38){
+    //         document.getElementById('box').style.transform = `translateY(-20px)`;
+    //     }
+
+    //     else if(event.keyCode == 39){
+    //         document.getElementById('box').style.transform = `translateX(20px)`;
+    //     }
+
+    //     else if(event.keyCode == 40){
+    //         document.getElementById('box').style.transform = `translateY(20px)`;
+    //     }
+    // }
+
+
+
+        function trigger(event){
+            let nav = document.getElementById('navbar1')
+
+            if(window.scrollY > 300){
+                nav.classList.add('bg-info')
+            }else{
+                nav.classList.remove('bg-info')
+            }
+        }
+
+
+</script>

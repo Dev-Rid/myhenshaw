@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>chat</title>
+
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+    <style>
+        /* div{
+            transition: all 0.3s
+        } */
+
+        /* div:hover{
+            transform: translateX(200px)
+        } */
+    </style>
+
+</head>
+<!-- <body class="bg-light p-5"> -->
+
+
+    <body class="bg-light p-5" onkeyup="trigger(event)" >
+
+<!-- 
+<div class="p-5 bg-danger" style="200px;">
+
+
+
+</div> -->
+
+
+
+
+    
+
+<!-- <input class="p-5 border shadow-sm bg-white" style="width: 200px;" onkeyup="trigger()">
+ -->
+
+
+
+
+
+
+
+
+
+<input id="message" class="form-control w-50 mx-auto m-5" onclick="trigger(event)">
+
+<div id="chat"></div>
+
+
+
+
+</body>
+</html>
+
+<script>
+
+    // function trigger(){
+    //     if(event.keyCode ==37){
+
+    //     }
+    // }
+
+
+
+
+
+
+        // function trigger(event) {
+
+        //     let tithe = "name"
+        //     console.log(event.keyCode)
+        // }
+
+
+
+
+
+    function trigger(event){
+        if(event.keyCode == 13 && document.getElementById("message").value !=""){
+            document.getElementById('chat').innerHTML += `
+            <p  class="alert alert-success m-3">${document.getElementById('message').value}</p> `
+
+          //  document.getElementById('message').value = ""
+        }
+        
+    }
+
+
+
+
+
+
+
+
+
+        //()() function
+    // (function(){
+    //     let name = "henshaw"
+    //     console.log(name)
+    // })()
+
+
+
+
+
+
+        //regular function
+        // function(){
+         //   let name = "rid"
+        //     console.log(name)
+        // }
+
+    
+
+
+
+
+        // //irregular function
+        // let do = function (){
+        //     console.log("rid")
+        // }
+
+
+
+
+    //arrow function
+
+    // const arrowFunc = (value) => {
+    //     console.log('arrow')
+    // }
+
+       
+
+
+
+
+</script>

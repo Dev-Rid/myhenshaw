@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>to do list</title>
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+</head>
+<body class="p-4">
+    <form onsubmit="replaceContent(event)" class="w-75 mx-auto p-4 ">
+        Title <input type="text" class="form-control" id="title">
+        <br>
+        Decision <textarea class="form-control" id="desc" ></textarea>
+        <br>
+        Date <input type="date" class="form-control" id="date">
+        <br>
+
+        <button type="button" class="btn btn-primary" onclick="addBefore()">Add before</button>
+        <button type="button" class="btn btn-secondary" onclick="addAfter()">Add after</button>
+        <button class="btn btn-warning">Replace content</button>
+        <button type="button" class="btn btn-danger" onclick="clearAll()">clear all</button>
+      
+
+    </form>
+
+
+    
+        <h1 class="bg-primary">Todos</h1>
+        <table id="panel" class="table"></table>
+</body>
+</html>
+
+<script>
+    
+    function addBefore(){
+        const h1 = document.createElement('h1');
+        h1.className ="text-light bg-danger";
+        h1.innerHTML
+        document.getElementById("panel").append(h1);
+    }
+
+
+    function addAfter() {
+        const title = document.getElementById("title");
+        const desc = document.getElementById("desc");
+        const date = document.getElementById("date");
+
+        document.getElementById("panel").innerHTML  += `
+        <tr>
+            <td>${title.value}</td>
+            <td style"width:450px">${title.value}</td>
+            <td>${title.value}</td>
+
+        </tr>
+        `;
+
+       
+     
+
+        }
+    
+    
+
+function replaceContent(event) {
+    event.preventDefault(); //stop screen from refreshing
+
+    const title = document.getElementById("title");
+    const desc= document.getElementById("desc");
+    const date = document.getElementById("date");
+
+    document.getElementById("panel").innerHTML = `
+        <tr>
+            <td>${title.value}</td>
+            <td style"width:450px">${title.value}</td>
+            <td>${title.value}</td>
+
+        </tr>
+        `;
+    }
+
+function clearAll(){
+    
+}
+
+
+
+
+</script>

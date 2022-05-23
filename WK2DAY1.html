@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else statement/conditional statement</title>
+
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+    <style>
+        .circle{
+            border: 15px solid lightgrey;
+          
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            margin: 5px;
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>traffic app</h1>
+
+    
+    <div class="circle " id="circle"  ></div>
+    
+
+    <br> 
+
+    <select id="light" onclick="checklight()">
+
+        <option value="online" selected>online</option>
+        <option value="offline" >offline</option>
+      
+        
+<!--         
+        <option value="go">go</option>
+        <option value="stop">stop</option>
+        <option value="ready">ready</option>
+        <option value="off">off</option>  -->
+
+    </select> 
+
+    <!-- <div style="margin-top:50px;">
+        <input type="text" id="password">
+        <input type="text" id="password">
+        
+
+        <button onclick="checkPassword()">check</button>
+    </div>
+
+    <h2 id="show"></h2> -->
+    
+</body>
+</html>
+
+<script>
+
+function checklight(){
+    const light  = document.getElementById("light").Value;
+   
+  
+    if(light == "online"){
+      document.getElementById("circle").classList.remove("bg-danger");
+      document.getElementById("circle").classList.add("bg-secondary");
+    }     
+     else (light == "offline")
+     document.getElementById("circle").classList.add("bg-secondary")  
+     document.getElementById("circle").classList.remove("bg-primary") 
+
+       
+}
+
+
+
+  
+// function checklight(){
+//     const light  = document.getElementById("light").Value;
+
+    
+    
+//         if (light == "go"){
+//             document.getElementById('circle').style.backgroundColor ="green"}
+
+//         else if (light == "stop"){
+//         document.getElementById('circle').style.backgroundColor ="red"}
+
+//         else if (light == "ready"){
+//         document.getElementById('circle').style.backgroundColor ="yellow"}
+
+//         else (light == "off"){
+//         document.getElementById('circle').style.backgroundColor ="lightgrey"}
+        
+
+//     }
+
+
+
+    
+    
+
+
+
+</script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="C:\Users\HP 640-G1\.vscode\extensions\css\bootstrap.css">
+
+
+    <style>
+        body{
+            background-color: black;
+        }
+        input{
+            height: 60px;
+            width: 300px;
+            background-color:darkmagenta;
+            font-size: large;
+            border: 1px dotted blueviolet;
+            border-radius: 15px 30px 15px 30px ;
+
+           
+        }
+
+        button{
+            height: 60px;
+            width: 100px;
+            border-radius:10px;
+            /* background-color:linen; */
+            border-radius: 15px 30px 15px 30px ;
+
+            }
+            h1{
+                color: blue;
+            }
+
+    </style>
+</head>
+
+<body style="padding: 10px;">
+    
+    <input type="text" id="input1" >
+    <input type="text" id="sign">
+    <input type="text" id="input3">
+
+    <button onclick="calc()">calculate</button>
+
+    <br> <br> <br>
+
+    <h1 id="show" ></h1>
+    
+</body>
+</html>
+
+<script>
+
+    function calc(){
+        let input1 = document.getElementById('input1')
+        let input2 = document.getElementById('input2')
+        let input3 = document.getElementById('input3')
+        let show = document.getElementById('show')
+
+
+    
+
+    if(sign.value == '*'){
+        show.innerHTML = parseInt(input1.value) * parseInt(input3.value) 
+    }
+
+    else if(sign.value == '+'){
+        show.innerHTML = parseInt(input1.value) + parseInt(input3.value) 
+    }
+
+    else if(sign.value == '-'){
+        show.innerHTML = parseInt(input1.value) - parseInt(input3.value) 
+    }
+
+    else if(sign.value == '/'){
+        show.innerHTML = parseInt(input1.value) / parseInt(input3.value) 
+    }
+}    
+</script>
+
